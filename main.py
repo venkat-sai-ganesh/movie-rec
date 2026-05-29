@@ -132,7 +132,7 @@ async def tmdb_cards_from_results(
                 title=m.get("title") or m.get("name") or "",
                 poster_url=make_img_url(m.get("poster_path")),
                 release_date=m.get("release_date"),
-                vote_average=m.get("vote average"),
+                vote_average=m.get("vote_average"),
             )
         )
     return out
@@ -263,7 +263,7 @@ async def attach_tmdb_card_by_title(title: str) -> Optional[TMDBMovieCard]:
             title=m.get("title") or title,
             poster_url=make_img_url(m.get("poster_path")),
             release_date=m.get("release_date"),
-            vote_average=m.get("vote average"),
+            vote_average=m.get("vote_average"),
         )
     except Exception:
         return None
