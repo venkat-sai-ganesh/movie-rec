@@ -102,7 +102,7 @@ async def tmdb_get(path: str, params: Dict[str, Any]) -> Dict[str, Any]:
     """
 
     q = dict(params)
-    q["api_keys"] = TMDB_API_KEY
+    q["api_key"] = TMDB_API_KEY
 
     try:
         async with httpx.AsyncClient(timeout=20) as client:
